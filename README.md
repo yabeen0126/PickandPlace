@@ -79,15 +79,6 @@
 * **로직:** 카메라 해상도와 실제 작업 공간의 크기를 고려한 선형 보간 리매핑 함수 구현.
 
 
-```python
-# [cite_start]리매핑 함수 예시 [cite: 920, 921]
-def remap(val, old_min, old_max, new_min, new_max):
-    return new_min + ((val - old_min) / (old_max - old_min)) * (new_max - new_min)
-
-```
-
-
-
 ### 2️⃣ 객체 인식 및 심도 측정 (Object Detection with Depth)
 
 * **기능:** 지갑, 충전기, 우산 등 3가지 클래스의 물체를 인식하고 정확한 위치 파악.
@@ -117,9 +108,23 @@ def remap(val, old_min, old_max, new_min, new_max):
 
 ## 6. 시연 시나리오 (Demo Scenarios) 
 
-1. **"OOO 갖다 줘" (Fetch):** 물체 좌표 인식 -> 파지(Grip) -> 사용자 얼굴 좌표로 이동 -> 외력 감지 후 전달 -> 복귀.
-2. **"정리해 / 갖다 놔" (Return):** 물체 파지 -> 기억된 원래 좌표로 이동 -> 놓기(Release) -> 홈 위치 복귀.
-3. **"여기로 와" (Come Here):** 사용자 얼굴 좌표 인식 -> 해당 위치로 이동 -> 대기.
-4. **"돌아가" (Go Home):** 시야가 가려지거나 작업 종료 시 기본 설정된 홈 위치로 복귀.
+**1. "OOO 갖다 줘" (Fetch):** 물체 좌표 인식 -> 파지(Grip) -> 사용자 얼굴 좌표로 이동 -> 외력 감지 후 전달 -> 복귀.
+<img src="https://raw.githubusercontent.com/yabeen0126/PickandPlace/main/img/01.gif" width="720"/>
+
+
+**2. "여기로 와" (Come Here):** 사용자 얼굴 좌표 인식 -> 해당 위치로 이동 -> 대기.
+<img src="https://raw.githubusercontent.com/yabeen0126/PickandPlace/main/img/02.gif" width="720"/>
+
+
+**3. "위/아래/오른쪽/왼쪽/앞/뒤" :** 목표 방향 인식 -> 해당 위치로 이동 -> 대기.
+<img src="https://raw.githubusercontent.com/yabeen0126/PickandPlace/main/img/03.gif" width="720"/>
+
+
+**4. "내려놔 / 갖다 놔" (Return):** 물체 파지 -> 기억된 원래 좌표로 이동 -> 놓기(Release) -> 홈 위치 복귀.
+<img src="https://raw.githubusercontent.com/yabeen0126/PickandPlace/main/img/04.gif" width="720"/>
+
+
+**5. "돌아가" (Go Home):** 시야가 가려지거나 작업 종료 시 기본 설정된 홈 위치로 복귀.
+<img src="https://raw.githubusercontent.com/yabeen0126/PickandPlace/main/img/05.gif" width="720"/>
 
 
