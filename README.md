@@ -23,7 +23,7 @@
 
 ---
 
-2. 팀 구성 (Team Members) 
+## 2. 팀 구성 (Team Members) 
 
 | 이름 | 역할 | 담당 업무 |
 | --- | --- | --- |
@@ -34,7 +34,7 @@
 
 ---
 
-3. 개발 환경 (Development Environment) 
+## 3. 개발 환경 (Development Environment) 
 
 ### 🛠 Hardware
 
@@ -58,14 +58,16 @@
 
 ---
 
-4. 시스템 아키텍처 (System Architecture) 
+## 4. 시스템 아키텍처 (System Architecture) 
 
-전체 시스템은 ROS 2 기반의 노드 통신으로 구성되어 있습니다.
+<img src="https://raw.githubusercontent.com/yabeen0126/PickandPlace/main/img/arc.png" width="720"/>
 
+**Face_Yolo (C270):** 사용자 얼굴 인식 후 2D 이미지 좌표를 로봇 기준 3D 좌표로 변환하여 발행
 
-**Face_Yolo (C270):** 사용자 얼굴 인식 후 2D 이미지 좌표를 로봇 기준 3D 좌표로 변환하여 발행 
 **Object_Yolo (RealSense):** 객체 인식 및 Depth 센서를 활용한 거리(z축) 측정 
+
 **Get_Keyword:** 사용자의 음성을 텍스트로 변환(STT)하고 LLM을 통해 핵심 의도(물건 이름, 행동) 파악 
+
 **Robot_Control:** 수신된 좌표와 명령어를 종합하여 로봇 팔의 이동 및 그리퍼 제어 수행 
 
 ---
