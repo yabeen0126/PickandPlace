@@ -115,14 +115,11 @@ def remap(val, old_min, old_max, new_min, new_max):
 
 ---
 
-6. 시연 시나리오 (Demo Scenarios) 
+## 6. 시연 시나리오 (Demo Scenarios) 
 
 1. **"OOO 갖다 줘" (Fetch):** 물체 좌표 인식 -> 파지(Grip) -> 사용자 얼굴 좌표로 이동 -> 외력 감지 후 전달 -> 복귀.
 2. **"정리해 / 갖다 놔" (Return):** 물체 파지 -> 기억된 원래 좌표로 이동 -> 놓기(Release) -> 홈 위치 복귀.
 3. **"여기로 와" (Come Here):** 사용자 얼굴 좌표 인식 -> 해당 위치로 이동 -> 대기.
 4. **"돌아가" (Go Home):** 시야가 가려지거나 작업 종료 시 기본 설정된 홈 위치로 복귀.
 
----
-
-7. 프로젝트 회고 (Retrospective) 
 
